@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto+Mono&family=Ubuntu+Mono&display=swap');
+
+
+:root{
+    --color-fg-default:#212529;
+
+}
+body{
+    background:var(--color-fg-default);
+}
+/** CODE AREA **/
+code {
+    color:#8f96a3;
+    font-family: 'Roboto Mono', monospace;
+    overflow-wrap: normal;
+    word-wrap: normal ;
+    box-decoration-break: clone;
+    padding: .1rem .3rem .2rem;
+    white-space:pre;
+    
+    border-radius: .2rem;
+}
+.button-code-clipboard{
+   display: flex;
+   border:0;
+}
+.result{
+    width: 37.5rem !important;
+}
+@media (max-width: 600px) {
+   .result{
+    width: 15.625rem !important;
+   }
+   
+   .card{
+     width: 100%;
+   }
+   
+  }
