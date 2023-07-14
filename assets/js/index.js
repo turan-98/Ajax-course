@@ -5,7 +5,7 @@ document.addEventListener('click', e => {
         e.preventDefault();
         loadPage(el);
         var $activeTab = document.activeElement;
-        console.log('teste ' + $activeTab)
+        changeClass($activeTab);
     }
 })
 async function loadPage(elem) {
@@ -25,3 +25,29 @@ function loadResult(response) {
     const result = document.querySelector('.result');
     result.innerHTML = response;
 }
+
+function changeClass(el){
+    var tabOne = document.querySelector("#linkOne");
+    var tabTwo = document.querySelector("#linkTwo");
+    var tabThree = document.querySelector("#linkThree");
+    var tabs = el;
+
+    tabs = tabs.toString();
+    
+    if(tabs.includes('indexPage1.html')){
+        tabTwo.classList.add('active');
+        tabOne.classList.remove('active');
+        tabThree.classList.remove('active')
+    }
+    else if(tabs.includes('indexPage2.html')){
+        tabThree.classList.add('active')
+        tabTwo.classList.remove('active');
+        tabOne.classList.remove('active');
+    }
+    else{
+        tabOne.classList.add('active');
+        tabThree.classList.remove('active')
+        tabTwo.classList.remove('active');
+    }
+}
+

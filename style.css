@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto+Mono&family=Ubuntu+Mono&display=swap');
-
-
 :root{
     --color-fg-default:#212529;
 
@@ -27,13 +25,12 @@ code {
 .result{
     width: 37.5rem !important;
 }
+
 @media (max-width: 600px) {
    .result{
     width: 15.625rem !important;
    }
-   
    .card{
      width: 100%;
    }
-   
   }
